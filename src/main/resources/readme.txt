@@ -66,3 +66,25 @@
    节点会自动退出自我保护模式.
 
       可以使用Eureka.server.enable-self-preservation = false 禁用自我保护模式,不推荐
+
+   4) CAP理论:一个分布式系统不可能同时很好的满足一致性,可用性和分区容错性这三个需求,最多只能同时较好的满足两个
+
+      传统的关系型数据库是ACID,NoSQL数据库是CAP
+
+      什么是CAP?
+      C:Consistency,强一致性
+      A:Availability,可用性
+      P:Partition tolerance,分区容错性
+
+      属于CP的:Redis、HBase、MongoDB
+
+      CA:单点集群,满足一致性、可用性的系统,通常在可扩展性上不太强大
+      CP：满足一致性,分区容忍性的系统,通常性能不高
+      AP:满足可用性,分区容忍性的系统,通常可能对一致性要求低一些
+
+      由于当前的网络硬件肯定会出现延迟丢包等问题,所以分区容忍性是我们必须要实现的.所以我们只能在一致性和可用性之间进行权衡,没有NoSQL系统能同时保证这三点
+
+
+   5) Eureka和Zookeeper区别
+      a) Eureka遵守AP,Zookeeper遵守CP
+
