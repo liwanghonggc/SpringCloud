@@ -13,6 +13,8 @@
         <module>SpringCloud-Provider-8001</module>
         <module>SpringCloud-Consumer-80</module>
         <module>SpringCloud-Eureka-7001</module>
+        <module>SpringCloud-Eureka-7002</module>
+        <module>SpringCloud-Eureka-7003</module>
     </modules>
 
     <properties>
