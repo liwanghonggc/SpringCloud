@@ -22,16 +22,16 @@ public class Dept implements Serializable {
     /**
      * 部门名称
      */
-    private String dName;
+    private String deptName;
 
     /**
      * 来自那个数据库,因为微服务架构可以一个服务对应一个数据库,同一个信息被存储到不同数据库
      */
     private String dbSource;
 
-    public Dept(String dName) {
+    public Dept(String deptName) {
         super();
-        this.dName = dName;
+        this.deptName = deptName;
     }
 
 }
