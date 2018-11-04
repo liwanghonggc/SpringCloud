@@ -1,7 +1,7 @@
 server: 
   port: 7001
  
-eureka: 
+eureka:
   instance:
     hostname: localhost                                                                    #eureka服务端的实例名称
   client: 
@@ -10,7 +10,5 @@ eureka:
     service-url: 
            defaultZone: http://${eureka.instance.hostname}:${server.port}/eureka/          #设置与Eureka Server交互的地址查询服务和注册服务都需要依赖这个地址(单机),对外暴露的地址
                                                                                            #defaultZone: http://eureka7002.com:7002/eureka/,http://eureka7003.com:7003/eureka/
-      
- 
-
- 
+  server:
+    enable-self-preservation: true                                                         #true表示开启Eureka的自我保护机制,默认就是开启
