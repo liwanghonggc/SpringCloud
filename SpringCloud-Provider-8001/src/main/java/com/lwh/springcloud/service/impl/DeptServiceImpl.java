@@ -21,20 +21,18 @@ public class DeptServiceImpl implements DeptService {
 	private DeptDao dao;
 	
 	@Override
-	public boolean add(Dept dept)
-	{
+	public boolean add(Dept dept){
+		System.out.println(dept);
 		return dao.addDept(dept);
 	}
 
 	@Override
-	public Dept get(Long id)
-	{
+	public Dept get(Long id){
 		return dao.findById(id);
 	}
 
 	@Override
-	public List<Dept> list()
-	{
+	public List<Dept> list(){
 		return dao.findAll();
 	}
 
