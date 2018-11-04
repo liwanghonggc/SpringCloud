@@ -12,6 +12,7 @@
         <module>SpringCloud-API</module>
         <module>SpringCloud-Provider-8001</module>
         <module>SpringCloud-Consumer-80</module>
+        <module>SpringCloud-Eureka-7001</module>
     </modules>
 
     <properties>

@@ -39,3 +39,20 @@
    SpringBoot专注于快速方便的开发单个个体微服务,而SpringCloud是关注全局微服务协调整理治理框架,它将SpringBoot开发的一个个单体微服务整合并管理起来
 
 6、SpringBoot与Dubbo
+
+7、Eureka
+   Netflix在设计Eureka时遵守的就是AP原则.
+
+   1) Eureka是什么
+       它是Netflix的一个子模块,也是核心模块之一,Eureka是一个基于Rest的服务,用于定位服务,以实现云端中间层服务发现和故障转移.服务注册与发现对于微服务架构
+   来说是非常重要的,有了服务注册与发现,只需要使用服务的标识符,就可以访问到服务,而不需要修改服务调用的配置文件了.功能类似于Dubbo的注册中心,比如Zookeeper.
+
+   2) Eureka的基本架构
+      SpringCloud封装了Netflix公司开发的Eureka模块来实现服务注册和发现.Eureka采用了C-S的设计架构,Eureka Server作为服务注册功能的服务器,它是服务注册
+   中心.而系统中的其他微服务,使用Eureka的客户端连接到Eureka Server并维持心跳连接,这样系统的维护人员就可以通过Eureka Server来监控系统中各个微服务是否正
+   常运行.SpringCloud的一些其他模块(如Zuul)就可以通过Eureka Server来发现系统中的其他微服务,并执行相关的逻辑.
+
+      Eureka包含两个组件:Eureka Server和Eureka Client,各个节点启动以后,会在Eureka Server中进行注册,这样Eureka Server的服务注册表中将会存储所有的可
+   用服务节点的信息,服务节点的信息可用在界面中直观看到.
+      Eureka Client是一个Java客户端,用于简化和Eureka Server的交互,客户端同时也具备一个内置的、使用轮询(round-robin)负载均衡的负载均衡器.在应用启动后,
+   将会向Eureka Server发送心跳(默认周期为30秒),如果Eureka Server在多个心跳周期内没有接收到某个节点的心跳,Eureka将会从服务注册表中把这个服务节点移除(默认90秒)
