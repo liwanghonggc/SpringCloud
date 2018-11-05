@@ -18,7 +18,12 @@ import java.util.List;
 @RestController
 public class DeptConsumeController {
 
-    private static final String REST_URL_PREFIX = "http://localhost:8001";
+    /**
+     * private static final String REST_URL_PREFIX = "http://localhost:8001";
+     *
+     * REST_URL_PREFIX 应该配置微服务的application name,Ribbon和Eureka整合后Consumer可以直接调用服务而不用再关心地址和端口号
+     */
+    private static final String REST_URL_PREFIX = "http://springcloud-dept";
 
     /**
      * RestTemplate提供了多种便捷访问远程HTTP服务的方法,是一种简单便捷的访问restful服务模板类,

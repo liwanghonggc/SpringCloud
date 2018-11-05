@@ -19,7 +19,8 @@
             <artifactId>SpringCloud-API</artifactId>
             <version>${project.version}</version>
         </dependency>
-        <!-- Ribbon相关 -->
+
+        <!-- Ribbon相关,Ribbon需要与Eureka整合 -->
         <dependency>
             <groupId>org.springframework.cloud</groupId>
             <artifactId>spring-cloud-starter-eureka</artifactId>
