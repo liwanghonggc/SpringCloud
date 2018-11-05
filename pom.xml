@@ -17,6 +17,7 @@
         <module>SpringCloud-Eureka-7003</module>
         <module>SpringCloud-Provider-8002</module>
         <module>SpringCloud-Provider-8003</module>
+        <module>SpringCloud-Consumer-Feign</module>
     </modules>
 
     <properties>
