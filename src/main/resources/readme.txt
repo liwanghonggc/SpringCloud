@@ -128,5 +128,42 @@
       f) BestAvailableRule,会先过滤掉由于多次访问故障而处于断路器跳闸状态的服务,然后选择一个并发量最小的服务
       g) ZoneAvoidanceRule,默认规则,复合判断server所在区域的性能和server的可用性选择服务器
 
+9、Feign负载均衡
+
+   1) Feign是怎么出来的?
+      有了Ribbon,我们可以直接调用我们的微服务进行访问,如private static final String REST_URL_PREFIX = "http://springcloud-dept".但是,大家目前都习惯了面向
+   接口编程,比如WebService接口,比如我们的Dao接口,这个已经是大家的规范.Feign支持通过接口注解+注解,调用我们的服务.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
