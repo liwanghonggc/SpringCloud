@@ -15,6 +15,8 @@
         <module>SpringCloud-Eureka-7001</module>
         <module>SpringCloud-Eureka-7002</module>
         <module>SpringCloud-Eureka-7003</module>
+        <module>SpringCloud-Provider-8002</module>
+        <module>SpringCloud-Provider-8003</module>
     </modules>
 
     <properties>
