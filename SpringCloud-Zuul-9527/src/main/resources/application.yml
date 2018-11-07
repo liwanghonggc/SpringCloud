@@ -14,9 +14,9 @@ eureka:
     prefer-ip-address: true
 
 
-zuul:                                                                             #配置以后可以使用URL访问微服务:http://zuul.com:9527/springcloud-dept/dept/get/1
+zuul:                                                                             #配置以后可以使用URL访问微服务:http://zuul9527.com:9527/springcloud-dept/dept/get/1
   routes:                                                                         #上面使用URL访问中,有暴露微服务的具体名字
-    mydept.serviceId: springcloud-dept                                            #可以配置路由屏蔽掉具体的微服务名称,使用URL访问:http://zuul.com:9527/mydept/dept/get/1
+    mydept.serviceId: springcloud-dept                                            #可以配置路由屏蔽掉具体的微服务名称,使用URL访问:http://zuul9527.com:9527/mydept/dept/get/1
     mydept.path: /mydept/**
   ignored-services: springcloud-dept                                              #配置禁止使用原URL访问,可以使用"*"配置
   prefix: /lwh                                                                    #配置访问前缀
