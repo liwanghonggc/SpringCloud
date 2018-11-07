@@ -28,6 +28,8 @@ public class DeptProvideController {
 
 	/**
 	 * 服务熔断示例,一旦调用服务方法失败并抛出了错误信息后,会自动调用@HystrixCommand标注好的fallbackMethod指定的方法
+	 * 缺点:1) 容易方法膨胀,加一个业务方法就要加一个fallbackMethod
+	 *     2) 业务方法和异常处理方法耦合了
 	 * @param id
 	 * @return
 	 */

@@ -11,9 +11,9 @@ import java.util.List;
 /**
  * @author lwh
  * @date 2018-11-05
- * @desp
+ * @desp 学习Feign的时候添加
  */
-@FeignClient(value = "springcloud-dept")
+@FeignClient(value = "springcloud-dept", fallbackFactory = DeptClientServiceFallbackFactory.class)
 public interface DeptClientService {
 
     @RequestMapping(value = "/dept/get/{id}", method = RequestMethod.GET)
