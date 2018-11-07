@@ -181,6 +181,8 @@
 
     配置以后可以使用URL访问微服务:http://zuul.com:9527/springcloud-dept/dept/get/1
 
+    上面使用URL访问中,有暴露微服务的具体名字
+
 
 
 

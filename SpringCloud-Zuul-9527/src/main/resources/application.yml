@@ -13,3 +13,12 @@ eureka:
     instance-id: gateway-9527.com
     prefer-ip-address: true
 
+
+#配置以后可以使用URL访问微服务:http://zuul.com:9527/springcloud-dept/dept/get/1
+#上面使用URL访问中,有暴露微服务的具体名字
+#可以配置路由屏蔽掉具体的微服务名称,使用URL访问:http://zuul.com:9527/mydept/dept/get/1
+zuul:
+  routes:
+    mydept.serviceId: springcloud-dept
+    mydept.path: /mydept/**
+  ignored-services: springcloud-dept                                        #配置禁止使用原URL访问
