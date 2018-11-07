@@ -19,6 +19,7 @@
         <module>SpringCloud-Provider-8003</module>
         <module>SpringCloud-Consumer-Feign</module>
         <module>SpringCloud-Provider-Hystrix-8001</module>
+        <module>SpringCloud-Consumer-Hystrix-Dashboard</module>
     </modules>
 
     <properties>
