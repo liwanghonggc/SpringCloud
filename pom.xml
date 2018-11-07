@@ -20,6 +20,7 @@
         <module>SpringCloud-Consumer-Feign</module>
         <module>SpringCloud-Provider-Hystrix-8001</module>
         <module>SpringCloud-Consumer-Hystrix-Dashboard</module>
+        <module>SpringCloud-Zuul-9527</module>
     </modules>
 
     <properties>
